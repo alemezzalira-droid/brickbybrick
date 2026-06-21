@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>BRICKBY — AR Preview</title>
+<title>BRICK BY BRICK — AR Preview</title>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 <style>
   :root{ --bg:#dcebcb; --ink:#16180f; }
@@ -19,38 +19,40 @@
   .ar-button{ background:var(--ink); color:var(--bg); border:none; border-radius:999px;
     padding:10px 18px; font-size:11px; font-family:inherit; letter-spacing:0.04em;
     position:absolute; bottom:20px; right:20px; }
+  .flag{ margin-top:10px; padding:10px 12px; background:rgba(0,0,0,0.06); border-radius:8px; font-size:10.5px; line-height:1.5; }
 </style>
 </head>
 <body>
 <header>
   <div class="brand">BACKYARD™ × MEZZA™</div>
-  <div class="tag">"BRICKBY" — prototype viewer</div>
+  <div class="tag">"BRICK BY BRICK" — prototype viewer</div>
 </header>
 
 <model-viewer
-  src="brick.glb"
-  ios-src="brick.usdz"
-  alt="Brickby — white plaster brick, raised lettering"
+  src="book.glb"
+  ios-src="book.usdz"
+  alt="Brick by Brick — book prototype"
   camera-controls
   auto-rotate
   auto-rotate-delay="800"
   rotation-per-second="18deg"
-  shadow-intensity="1.4"
-  exposure="1.0"
+  shadow-intensity="1.1"
+  exposure="1.05"
   environment-image="neutral"
   ar
   ar-modes="quick-look scene-viewer webxr"
-  camera-orbit="35deg 70deg 0.42m"
-  field-of-view="26deg"
-  min-camera-orbit="auto auto 0.2m"
-  max-camera-orbit="auto auto 0.8m"
+  camera-orbit="25deg 75deg 0.7m"
+  field-of-view="28deg"
+  min-camera-orbit="auto auto 0.35m"
+  max-camera-orbit="auto auto 1.2m"
 >
   <button slot="ar-button" class="ar-button">Vedi in AR ↗</button>
 </model-viewer>
 
 <div class="meta">
-  Formato: 150 × 58 × 40mm — scala 1:1. Gesso bianco, finitura materica (grana sottile), BRICK / BY in rilievo (2mm), logo Backyard™ inciso sul top con fondo a contrasto.<br>
+  Formato reale: 210 × 297 × 25mm — scala 1:1 nel visualizzatore AR.<br>
   Ruota con un dito, pizzica per zoomare. Su iPhone tocca "Vedi in AR" per Quick Look.
+  <div class="flag">⚠ La costina è ritagliata alla larghezza reale di 25mm — il testo "BRICK BY BRICK" risulta tagliato in alto/basso. Non è un bug: è la costina così com'è disegnata adesso, in scala 1:1.</div>
 </div>
 </body>
 </html>
